@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestion_employee.Dep"
+                Title="Departement" BackgroundColor="Black">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD"
+                     Clicked="ToolbarItem_Clicked"  IconImageSource="addep.png" Priority="2" Order="Primary"/>
+        <ToolbarItem Text="edit" Clicked="ToolbarItem_Clicked_1"
+                     IconImageSource="editt.png" Priority="1" Order="Primary"/>
+        <ToolbarItem Text="sup" Clicked="ToolbarItem_Clicked_2"
+                      IconImageSource="sup.png" Priority="0" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <ListView Grid.Row="3" x:Name="lvdep" HasUnevenRows="True" ItemsSource="{Binding deps}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout>
+                                <Label Text="{Binding id}" Margin="10,10,10,0" FontSize="Subtitle" FontAttributes="Bold" BackgroundColor="#87ceeb" ></Label>
+
+                                <Label Grid.Row="1" Text="{Binding nom}" Margin="10,0" FontSize="Medium" TextColor="white"></Label>
+
+                               
+                            </StackLayout>
+
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestion_employee.supdep" BackgroundColor="Black" >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Supprimer departement"
+                FontSize="Large"/>
+            <Image Source="sup.png" WidthRequest="80" HeightRequest="80"/>
+            <Entry   x:Name="id" Placeholder="Entrer id" TextColor="white" PlaceholderColor="white"></Entry>
+            <Button VerticalOptions="Center" Text="supprimer" TextColor="white" BackgroundColor="Transparent" BorderColor="white"
+          CornerRadius="50" BorderWidth="1.5" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

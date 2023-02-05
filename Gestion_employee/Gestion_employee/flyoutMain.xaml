@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestion_employee.flyoutMain"
+                   xmlns:local="clr-namespace:Gestion_employee"
+             Title="flyoutmenu">
+    
+        <StackLayout>
+       
+        <Image Source="cc.png" WidthRequest="300" HeightRequest="300" BackgroundColor="White"/>
+            
+       
+        <ListView x:Name="ss" x:FieldModifier="public" BackgroundColor="White">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:fly}">
+                    <local:fly title="Employe" Iconsource="cc.png" targetPage="{x:Type local:Employe}"/>
+                    <local:fly title="Departement" Iconsource="c.png" targetPage="{x:Type local:Dep}"/>
+                    <local:fly title="Plus des information" Iconsource="inf.png" targetPage="{x:Type local:welcom}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33"/>
+                                <ColumnDefinition Width="*"/>
+                                
+
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Iconsource}"/>
+                            <Label Grid.Column="1"       Text="{Binding title}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+  
+</ContentPage>

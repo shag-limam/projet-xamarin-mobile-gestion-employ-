@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestion_employee.editemp"  BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="black">
+            <Label Text="Modifier Employee"
+              FontSize="Large"/>
+            <Entry   x:Name="id" Placeholder="id" TextColor="white" PlaceholderColor="white"></Entry>
+            <Entry x:Name="nom" Placeholder="nom" TextColor="White" PlaceholderColor="white"></Entry>
+            <Entry x:Name="pr" Placeholder="prenom" TextColor="white" PlaceholderColor="white"></Entry>
+            <Entry   x:Name="salaire" Placeholder="salaire" TextColor="Purple" PlaceholderColor="white"></Entry>
+            <Entry x:Name="tel" Placeholder="age" TextColor="white" PlaceholderColor="white"></Entry>
+           
+            <Button VerticalOptions="Center" Text="Modifier" TextColor="White" BackgroundColor="Transparent" BorderColor="white"
+          CornerRadius="50" BorderWidth="1.5" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

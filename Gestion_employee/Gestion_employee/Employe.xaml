@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestion_employee.Employe"
+             Title="Employee" BackgroundColor="Black">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD"
+                     Clicked="ToolbarItem_Clicked"  IconImageSource="adempp.png" Priority="2" Order="Primary"/>
+        <ToolbarItem Text="edit" Clicked="ToolbarItem_Clicked_1"
+                     IconImageSource="editt.png" Priority="1" Order="Primary"/>
+        <ToolbarItem Text="sup" Clicked="ToolbarItem_Clicked_2"
+                      IconImageSource="sup.png" Priority="0" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView Grid.Row="3" x:Name="lvemp" HasUnevenRows="True" ItemsSource="{Binding emps}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout>
+                                <Label Text="{Binding emp_id}" Margin="10,10,10,0" FontSize="Subtitle" FontAttributes="Bold" BackgroundColor="#87ceeb"></Label>
+
+                                <Label Text="Nom" FontSize="Medium"  />
+                                <Label Grid.Row="1" Text="{Binding emp_nom}" Margin="10,0" FontSize="Medium" TextColor="white"></Label>
+                                <Label Text="salaire" FontSize="Medium"  />
+                                <Label Grid.Row="2" Text="{Binding emp_salaire}" Margin="10,0" FontSize="Medium"  TextColor="white"></Label>
+                                <Label Text="age" FontSize="Medium"  />
+                                <Label Grid.Row="2" Text="{Binding emp_age}" Margin="10,0" FontSize="Medium"  TextColor="white"></Label>
+                                <Label Text="numero_dep" FontSize="Medium"  />
+                                <Label Grid.Row="2" Text="{Binding dept_id}" Margin="10,0" FontSize="Medium" TextColor="white"></Label>
+                            </StackLayout>
+
+                            
+                          
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
